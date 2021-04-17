@@ -163,15 +163,15 @@
 
             <control>
                 <group>[AutoDJ]</group>
-                <key>enabled</key>
-                <description>Toggle Auto DJ On/Off</description>
+                <key>DDJ200.changePadMode</key>
+                <description>Change Pad mode</description>
                 <status>0x96</status>
                 <midino>0x59</midino>
                 <options>
-                    <normal/>
+                    <script-binding/>
                 </options>
             </control>
-            <control>
+            <!--<control>
                 <group>[AutoDJ]</group>
                 <key>fade_now</key>
                 <description>Trigger the transition to the next track</description>
@@ -180,7 +180,7 @@
                 <options>
                     <normal/>
                 </options>
-            </control>
+            </control>-->
 
             <control>
                 <group>[Channel2]</group>
@@ -606,7 +606,7 @@
 <!-- ##### Hotcues ##### -->
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 1, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x00</midino>
@@ -616,7 +616,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 2, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x01</midino>
@@ -626,7 +626,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 3, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x02</midino>
@@ -636,7 +636,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 4, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x03</midino>
@@ -646,7 +646,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 5, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x04</midino>
@@ -656,7 +656,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 6, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x05</midino>
@@ -666,7 +666,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 7, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x06</midino>
@@ -676,7 +676,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 8, Deck 1: Set, preview, jump to</description>
                 <status>0x97</status>
                 <midino>0x07</midino>
@@ -688,7 +688,7 @@
 
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 1, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x00</midino>
@@ -698,7 +698,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 2, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x01</midino>
@@ -708,7 +708,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 3, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x02</midino>
@@ -718,7 +718,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 4, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x03</midino>
@@ -728,7 +728,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 5, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x04</midino>
@@ -738,7 +738,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 6, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x05</midino>
@@ -748,7 +748,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 7, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x06</midino>
@@ -758,7 +758,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNActivate</key>
+                <key>DDJ200.padButtonClicked</key>
                 <description>Hotcue 8, Deck 2: Set, preview, jump to</description>
                 <status>0x99</status>
                 <midino>0x07</midino>
@@ -770,7 +770,7 @@
             <control>
                 <group>[Channel1]</group>
                 <!--key>hotcue_1_clear</key-->
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 1, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x00</midino>
@@ -780,7 +780,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 2, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x01</midino>
@@ -790,7 +790,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 3, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x02</midino>
@@ -800,7 +800,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 4, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x03</midino>
@@ -810,7 +810,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 5, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x04</midino>
@@ -820,7 +820,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 6, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x05</midino>
@@ -830,7 +830,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 7, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x06</midino>
@@ -840,7 +840,7 @@
             </control>
             <control>
                 <group>[Channel1]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 8, Deck 1: Clear</description>
                 <status>0x98</status>
                 <midino>0x07</midino>
@@ -852,7 +852,7 @@
             <control>
                 <group>[Channel2]</group>
                 <!--key>hotcue_1_clear</key-->
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 1, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x00</midino>
@@ -862,7 +862,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 2, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x01</midino>
@@ -872,7 +872,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 3, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x02</midino>
@@ -882,7 +882,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 4, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x03</midino>
@@ -892,7 +892,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 5, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x04</midino>
@@ -902,7 +902,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 6, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x05</midino>
@@ -912,7 +912,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 7, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x06</midino>
@@ -922,7 +922,7 @@
             </control>
             <control>
                 <group>[Channel2]</group>
-                <key>DDJ200.hotcueNClear</key>
+                <key>DDJ200.padShiftButtonClicked</key>
                 <description>Hotcue 8, Deck 2: Clear</description>
                 <status>0x9A</status>
                 <midino>0x07</midino>
