@@ -1,15 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <MixxxControllerPreset schemaVersion="1" mixxxVersion="2.0.0+">
     <info>
-        <name>Pioneer DDJ-200</name>
-        <author>Dan Giddins, Frank.Breitling at gmx.de</author>
+        <name>Pioneer DDJ-200 (Alternative)</name>
+        <author>Dan Giddins, Frank.Breitling at gmx.de, Geovanni Pacheco</author>
         <description>2-deck USB and Bluetooth MIDI controller with support for 4-deck mode.</description>
         <forum>https://mixxx.discourse.group/t/pioneer-ddj-200-mapping/18259</forum>
-        <manual>pioneer_ddj_200</manual>
+        <manual>pioneer_ddj_200_alternative</manual>
     </info>
-    <controller id="DDJ-200">
+    <controller id="DDJ-200 ALT">
         <scriptfiles>
-            <file functionprefix="DDJ200" filename="Pioneer-DDJ-200-scripts.js"/>
+            <file functionprefix="DDJ200" filename="Pioneer-DDJ-200-Alternative-scripts.js"/>
         </scriptfiles>
         <controls>
             <control>
