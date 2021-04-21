@@ -71,13 +71,13 @@ DDJ200.updatePadModeLed = function() {
         engine.stopTimer(DDJ200.padModeBlinkTimer);
         DDJ200.padModeBlinkTimer = undefined;
     }
-    if (DDJ200.padModeIndex === 1) {
-        var tunedOn = false;
+    if (DDJ200.padModeIndex === 2) {
+        var tunedOn = true;
         DDJ200.padModeBlinkTimer = engine.beginTimer(250, function () {
             midi.sendShortMsg(0x96, 0x59, 0x7F * (tunedOn = !tunedOn));
         });
     } else {
-        midi.sendShortMsg(0x96, 0x59, 0x7F * (DDJ200.padModeIndex === 2));
+        midi.sendShortMsg(0x96, 0x59, 0x7F * (DDJ200.padModeIndex === 1));
     }
 };
 
@@ -408,19 +408,19 @@ DDJ200.effectNActive = function(channel, control, value, status, group) {       
 };
 
 DDJ200.padButtonClicked = function(channel, control, value, status, group) {
-    if (DDJ200.padModeIndex === 0) {
+    if (DDJ200.padModes[DDJ200.padModeIndex] === 'hotcue') {
         DDJ200.hotcueNActivate(channel, control, value, status, group)
-    } else if (DDJ200.padModeIndex === 1) {
+    } else if (DDJ200.padModes[DDJ200.padModeIndex] === 'loop') {
         DDJ200.repeatNActive(channel, control, value, status, group)
-    } else if (DDJ200.padModeIndex === 2) {
+    } else if (DDJ200.padModes[DDJ200.padModeIndex] === 'effects') {
         DDJ200.effectNActive(channel, control, value, status, group)
     }
 };
 
 DDJ200.padShiftButtonClicked = function(channel, control, value, status, group) {
-    if (DDJ200.padModeIndex === 0) {
+    if (DDJ200.padModes[DDJ200.padModeIndex] === 'hotcue') {
         DDJ200.hotcueNClear(channel, control, value, status, group)
-    } else if (DDJ200.padModeIndex === 1) {
+    } else if (DDJ200.padModes[DDJ200.padModeIndex] === 'loop') {
         DDJ200.rollRepeatN(channel, control, value, status, group)
     }
 };
@@ -456,11 +456,11 @@ DDJ200.switchLEDs = function(vDeckNo) {
 };
 
 DDJ200.switchPadLEDs = function(vDeckNo) {
-    if (DDJ200.padModeIndex === 0) {
+    if (DDJ200.padModes[DDJ200.padModeIndex] === 'hotcue') {
         DDJ200.switchHotcueLEDs(vDeckNo);
-    } else if (DDJ200.padModeIndex === 1) {
+    } else if (DDJ200.padModes[DDJ200.padModeIndex] === 'loop') {
         DDJ200.switchLoopLEDs(vDeckNo);
-    } else if (DDJ200.padModeIndex === 2) {
+    } else if (DDJ200.padModes[DDJ200.padModeIndex] === 'effects') {
         DDJ200.switchOffAllPadLEDs(vDeckNo);
     }
 };

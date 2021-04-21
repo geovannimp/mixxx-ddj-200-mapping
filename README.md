@@ -6,8 +6,8 @@ This version changes "Transition FX" adding a toggle between 3 states:
 
 
 - Turned off (default) = Pads in hotcue mode
-- Blinking = Pads in Loop mode
-- Turned on = Pads in effect mode
+- Turned on = Pads in Loop mode
+- Blinking = Pads in effect mode
 
 ### Here are some videos testing the feature:
 
